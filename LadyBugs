@@ -20,8 +20,10 @@ public class Main {
         int[] startingLadybug = Arrays.stream(in.nextLine().split(" "))
                 .mapToInt(e -> Integer.parseInt(e))
                 .toArray();
-        for (int i : startingLadybug){
-            newField[i] = 1;
+        for (int i : startingLadybug) {
+            if (i < emptyField.length) {
+                newField[i] = 1;
+            }
         }
 
         //Testing newField array
